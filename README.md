@@ -68,9 +68,6 @@ No more guessing. No more permission errors. Just plug in and upload.
 **Nothing shows up after unplugging/replugging?**
 - Make sure you're using a data cable, not a charge-only cable. Yes, those exist, and yes, they're infuriating.
 
-**Different IDs?**
-- Some boards use FTDI chips (`0403:6001`) or other variants. Just update the `idVendor` and `idProduct` values in the rules file to match what you see. (You can use `lsusb` or `udevadm info`).
-
 **Still getting permission errors?**
 - Make sure you ran the `udevadm` commands and unplugged/replugged the device.
 
