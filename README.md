@@ -71,3 +71,6 @@ No more guessing. No more permission errors. Just plug in and upload.
 ## Final Thoughts
 
 This is one of those "set it and forget it" fixes. Once it's done, it just works. No more fighting with ports, no more permission headaches—just the way it should be.
+
+--- 
+Made by curious by 🌆 NISY.
