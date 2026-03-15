@@ -9,7 +9,7 @@ If you've ever worked with cheap Arduino UNO, Nano, ESP8266, or ESP32 clones in 
 
 **The 'Dissapearing' Port:** You try to use `/dev/ttyUSB0` for your projects because yesterday your board was there. Today, it's on `/dev/ttyUSB1`. Sure, it could be more annoying if you use more than one board (and not only boards, sometimes your peripherals too) or unstable tools such as `screen`, because you'll end up playing "guess the port" every time you plug something in.
 
-The culprit? Most clones use dirt-cheap USB-to-serial chips (**CH340** or **CP2102**) that Linux treats like any other random USB device.
+The culprit? Most clones use cheap USB-to-serial chips (**CH340** or **CP2102**) that Linux treats like any other random USB device.
 
 ## The Fix
 
@@ -29,18 +29,15 @@ This guide works for board with these common USB-to-Serial chips (specifficaly t
 
 ## How-to-Setup 
 
-**First**, copy the ``99-board-clones.rules`` file into udev rules directory.
+**First,** Install the program.
 ```bash
-sudo cp 99-board-clones.rules /etc/udev/rules.d/
+sudo chmod +x install.sh && ./install.sh
 ```
-**Second**, reload the udev system so it notices the new file (no reboot required)
+**Second,** Logout or restart your computer.
+
+**Lastly,** Check if the board finally configured in your computer.
 ```bash
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-```
-**Lastly,** unplug your board and plug it back. Check if the permission and names are correct.
-```bash
-ls -l /dev/my*
+$ ls -l /dev/my*
 ```
 
 The output should be like this:
